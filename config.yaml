@@ -1,27 +1,27 @@
 esphome:
-    name: exampled1mini # The name of the device
+  name: exampled1mini # The name of the device
+
+esp8266: # The platform type
+  board: d1_mini # The type of ESP board
   
-  esp8266: # The platform type
-    board: d1_mini # The type of ESP board
+# Enabling the logging component
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "i51USvDruBRuPndxTYuQ41ijowUdoQVXOKYwPUQITAw=" # This is the HA encryption key HA asks for during the device discovery
     
-  # Enabling the logging component
-  logger:
+# The OTA flashing password
+ota:
+  password: !secret ota_password
+
+wifi: # Your Wifi network details
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
   
-  # Enable Home Assistant API
-  api:
-    encryption:
-      key: "i51USvDruBRuPndxTYuQ41ijowUdoQVXOKYwPUQITAw=" # This is the HA encryption key HA asks for during the device discovery
-      
-  # The OTA flashing password
-  ota:
-    password: !secret ota_password
-  
-  wifi: # Your Wifi network details
-    ssid: !secret wifi_ssid
-    password: !secret wifi_password
-    
-  # Enable fallback hotspot in case wifi connection fails  
-    ap:
-      ssid: "exampled1mini Fallback Hotspot" # The name of the AP the device will make
-      password: !secret ap_password # The AP password
-  captive_portal:
+# Enable fallback hotspot in case wifi connection fails  
+  ap:
+    ssid: "exampled1mini Fallback Hotspot" # The name of the AP the device will make
+    password: !secret ap_password # The AP password
+captive_portal:
