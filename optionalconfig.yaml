@@ -73,5 +73,5 @@ text_sensor:
 
 switch:     
   - platform: restart # Adds a restart button as an entity in Home Assistant and the webserver to restart the device.
-    name: $friendly_name Restart
+    name: ${friendly_name} Restart
 
