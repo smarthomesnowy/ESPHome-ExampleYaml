@@ -33,6 +33,7 @@ captive_portal:
 
 # Optional extras
 
+# Warning the webserver can consume a lot of resources on your ESP so it is best to only activate this after making sure everything else is working
 web_server: # Creates a simple web server on the device that can be accessed through any browser by entering the device IP in the URL bar
   port: 80
 
